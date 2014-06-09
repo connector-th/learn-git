@@ -1,0 +1,24 @@
+1. Write function that count word size case-insensitively. 
+Input: "Hello world hello hello earth earth"
+Output: Object{
+		hello : 3,
+		world : 1,
+		earth : 2
+	}
+
+2. Write a function x that return a function that double the return value of input function
+var a = function(a) {return a+2;}
+	var y = x(a);
+	y(5) = 14;
+	y(7) = 18;
+	y(9) = 22;
+
+var b = function(b) { return 10}
+	var y = x(b);
+	y(5) = 20;
+	y(7) = 20;
+	y(15) = 20;
+
+3.write a function that sort array of object by the object's "height" key.
+Input: [{name: "a",height: 3},{name: "b",height: 1},{name: "c",height: 90}]
+Output: [{name: "b",height: 1},{name: "a",height: 3},{name: "c",height: 90}]
