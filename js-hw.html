@@ -1,0 +1,66 @@
+<script type="text/javascript">
+console.log("Q.1");
+var text = "Hello world hello hello earth earth";
+function counWord(text){
+	var result = {hello : 0, world : 0, earth : 0};
+	var text_array = text.split(" ");
+	for(var i = 0; i < text_array.length; i++){
+		if(text_array[i].toLowerCase()=="hello"){
+			result.hello++;
+		}else if(text_array[i].toLowerCase()=="world"){
+			result.world++;
+		}else if(text_array[i].toLowerCase()=="earth"){
+			result.earth++;
+		}
+	}
+	console.log(result);
+}
+counWord(text);
+
+console.log("Q.2");
+function x(c){
+	return function(c){return c*2;}; 
+}
+var a = function(a) {return a+2;};
+var y = x(a);
+console.log("y = x(a)");
+console.log("y(5) = "+y(a(5)));
+console.log("y(7) = "+y(a(7)));
+console.log("y(9) = "+y(a(9)));
+
+var b = function(b) { return 10}
+var y = x(b);
+console.log("y = x(b)");
+console.log("y(5) = "+y(b(5)));
+console.log("y(7) = "+y(b(7)));
+console.log("y(15) = "+y(b(9)));
+
+console.log("Q.3");
+var q3 = [{name: "a",height: 3},{name: "b",height: 1},{name: "c",height: 90}];
+function sort(data){
+	var endIndex = 0,
+	len = data.length-1, 
+	hasSwap = true;
+	
+	for(var i = 0; i < len; i++){
+		hasSwap = false;
+        endIndex = len-i;
+        for (var j = 0; j < endIndex; j++) {
+        	var tmp;
+        	if(data[i].height > data[i+1].height){
+				tmp = data[i];
+				data[i] = data[i+1];
+				data[i+1] = tmp;
+				hasSwap = true;
+			}
+        }
+        if(!hasSwap){
+            break;
+        }	
+	}
+	return data;
+}
+
+var min = sort(q3);
+console.log(min);
+</script>
